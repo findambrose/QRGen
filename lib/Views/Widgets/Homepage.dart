@@ -19,10 +19,10 @@ class _HomepageState extends State<Homepage> {
           Text(
             'Type text then press generate button.',
             style: TextStyle(
-                fontStyle: FontStyle.italic, fontSize: 17, fontWeight: FontWeight.w400),
+                fontStyle: FontStyle.italic, fontSize: 19, fontWeight: FontWeight.w400),
           ),
           SizedBox(
-            height: 10,
+            height: 7,
           ),
           Form(
             key: _key,
@@ -31,7 +31,11 @@ class _HomepageState extends State<Homepage> {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: TextFormField(
-                    decoration: InputDecoration(
+                    textAlign: TextAlign.justify,
+                    maxLines: null,
+                    keyboardType: TextInputType.multiline,
+                    decoration: InputDecoration( 
+
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       fillColor: Colors.green.shade200,
                       filled: true,
@@ -45,23 +49,25 @@ class _HomepageState extends State<Homepage> {
                           color: Colors.green
                         ),
                         borderRadius: BorderRadius.circular(7)) ,
-                      contentPadding: EdgeInsets.only(top:10, bottom: 140,  left: 10),
-                      hintText: 'Enter text to generate QR for.. e.g www.findambrose.ga',
+
+                      contentPadding: EdgeInsets.only(top: 0, bottom: 30,  left: 10),
+                      hintText: 'Enter text to generate QR for.. \n \ne.g www.findambrose.ga, 8801324, \n\nambkyusya@gmail.com, 0790679085.\n\n\n\n\n\n\n\n\n\n\n',
                       labelText: 'Content',
-                      labelStyle: TextStyle(fontSize: 17, color: Colors.purple)
+                      labelStyle: TextStyle(fontSize: 20, color: Colors.green)
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 17),
                 RaisedButton(
-                  padding: EdgeInsets.all(10),
+                  padding: EdgeInsets.all(15),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)
                   ),
                   color: Colors.purple,
-                  onPressed: () {},
-                  child: Text('Generate QR'),
-                )
+                  onPressed: () {},                                
+                    child: Text('Generate QR', style: TextStyle(fontSize: 19),),
+                  ),
+             
               ],
             ),
           )
